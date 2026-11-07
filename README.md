@@ -4,7 +4,7 @@ a small hvh cheat base for counter strike 2 before the animationgraph2 update. (
 # how to install the build it targets
 head over to [DepotDownloader](https://github.com/SteamRE/DepotDownloader) and
 download the windows x64 release. extract it and open cmd in the directory
-containing the executable, then run:
+containing the executable (replace `<username>` with your steam username), then run:
 
 ```bat
 DepotDownloader.exe -app 730 -depot 2347770 2347771 2347774 -manifest 7643209663222864337 5302572154886330081 6328994415321406861 -username <username> -remember-password -dir "C:\cs2 legacy"
