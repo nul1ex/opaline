@@ -134,6 +134,9 @@
     <ClCompile Include="..\src\features\movement\jumpbug.cpp">
       <ObjectFileName>$(IntDir)features_movement_jumpbug.obj</ObjectFileName>
     </ClCompile>
+    <ClCompile Include="..\src\features\movement\slowwalk.cpp">
+      <ObjectFileName>$(IntDir)features_movement_slowwalk.obj</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="..\src\features\rage\autostop.cpp">
       <ObjectFileName>$(IntDir)features_rage_autostop.obj</ObjectFileName>
     </ClCompile>
@@ -243,7 +246,6 @@
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <SDLCheck>false</SDLCheck>
     </ClCompile>
-    <ClCompile Include="slowwalk.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\core\game.hpp" />

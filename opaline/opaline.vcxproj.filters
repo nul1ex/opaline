@@ -87,6 +87,9 @@
     <ClCompile Include="..\src\features\movement\jumpbug.cpp">
       <Filter>src\features\movement</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\features\movement\slowwalk.cpp">
+      <Filter>src\features\movement</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\features\rage\autostop.cpp">
       <Filter>src\features\rage</Filter>
     </ClCompile>
@@ -176,9 +179,6 @@
     </ClCompile>
     <ClCompile Include="..\external\safetyhook\safetyhook.cpp">
       <Filter>external\safetyhook</Filter>
-    </ClCompile>
-    <ClCompile Include="slowwalk.cpp">
-      <Filter>src\features\movement</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
