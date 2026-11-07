@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="external">
+      <UniqueIdentifier>{b9eaa3a9-4cdd-533e-9097-849d32663582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\imgui">
+      <UniqueIdentifier>{067eb45b-f6ea-5864-bf9a-9c2afbb850b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\imgui\backends">
+      <UniqueIdentifier>{2c79dde9-337b-57a8-aa06-dc6910a015d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\nlohmann">
+      <UniqueIdentifier>{c9ae41bc-53d7-55f1-9344-b3386d8729a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\safetyhook">
+      <UniqueIdentifier>{9820f8d7-1af1-554b-95e6-131434e2c950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{f159be11-2ee2-513e-b237-4cf5c7453103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{d6e7d5e7-6aec-5ee3-9455-1d02ebfe2edc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features">
+      <UniqueIdentifier>{b7302fdf-98e4-56f9-8998-3d81cd1c73a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\antiaim">
+      <UniqueIdentifier>{7f0a219c-f2b6-5976-a6e7-97fe96050731}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\misc">
+      <UniqueIdentifier>{1e340b30-8ecc-5747-91db-87ee2af7c969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\movement">
+      <UniqueIdentifier>{2cb4aa6f-e95d-5325-9259-e6b65d0770ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\rage">
+      <UniqueIdentifier>{0b4dc8ca-de31-5319-be73-1abd80fe9276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\features\visuals">
+      <UniqueIdentifier>{b5c3ebff-7fb6-5bcf-8882-314b7d75c67a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\input">
+      <UniqueIdentifier>{8359c0c2-30e2-5b88-88c1-09dd87462121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\prediction">
+      <UniqueIdentifier>{eb600f65-6ab1-5464-bdf3-dab12fd7131c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk">
+      <UniqueIdentifier>{606440f1-8c9e-561a-927a-4cf0ef6f3408}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk\generated">
+      <UniqueIdentifier>{684295be-fa32-5ac8-aaf1-868df628becd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui">
+      <UniqueIdentifier>{70ca3769-9c69-530d-b36c-1d40929daed6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\core\game.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\hooks.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\log.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\modules.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\thread_pool.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\antiaim\antiaim.cpp">
+      <Filter>src\features\antiaim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\misc\camera.cpp">
+      <Filter>src\features\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\movement\autostrafe.cpp">
+      <Filter>src\features\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\movement\bhop.cpp">
+      <Filter>src\features\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\movement\jumpbug.cpp">
+      <Filter>src\features\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\autostop.cpp">
+      <Filter>src\features\rage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\hitboxes.cpp">
+      <Filter>src\features\rage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\hitchance.cpp">
+      <Filter>src\features\rage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\penetration.cpp">
+      <Filter>src\features\rage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\points.cpp">
+      <Filter>src\features\rage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\punch.cpp">
+      <Filter>src\features\rage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\ragebot.cpp">
+      <Filter>src\features\rage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\records.cpp">
+      <Filter>src\features\rage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\visuals\esp.cpp">
+      <Filter>src\features\visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\features\visuals\scope.cpp">
+      <Filter>src\features\visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\input\command.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\prediction\engine.cpp">
+      <Filter>src\prediction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sdk\engine.cpp">
+      <Filter>src\sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sdk\entities.cpp">
+      <Filter>src\sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\config.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\input.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\menu.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\render.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\theme.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\widgets.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\backends\imgui_impl_dx11.cpp">
+      <Filter>external\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>external\imgui\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_draw.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_tables.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_widgets.cpp">
+      <Filter>external\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\safetyhook\Zydis.c">
+      <Filter>external\safetyhook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\external\safetyhook\safetyhook.cpp">
+      <Filter>external\safetyhook</Filter>
+    </ClCompile>
+    <ClCompile Include="slowwalk.cpp">
+      <Filter>src\features\movement</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\core\game.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\hooks.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\log.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\modules.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\thread_pool.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\antiaim\antiaim.hpp">
+      <Filter>src\features\antiaim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\misc\camera.hpp">
+      <Filter>src\features\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\movement\movement.hpp">
+      <Filter>src\features\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\rage\autostop.hpp">
+      <Filter>src\features\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\rage\hitboxes.hpp">
+      <Filter>src\features\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\rage\hitchance.hpp">
+      <Filter>src\features\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\rage\penetration.hpp">
+      <Filter>src\features\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\rage\points.hpp">
+      <Filter>src\features\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\rage\punch.hpp">
+      <Filter>src\features\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\rage\ragebot.hpp">
+      <Filter>src\features\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\rage\records.hpp">
+      <Filter>src\features\rage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\visuals\esp.hpp">
+      <Filter>src\features\visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\features\visuals\scope.hpp">
+      <Filter>src\features\visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\input\command.hpp">
+      <Filter>src\input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pch.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\prediction\engine.hpp">
+      <Filter>src\prediction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdk\engine.hpp">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdk\entities.hpp">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdk\generated\client.hpp">
+      <Filter>src\sdk\generated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdk\math.hpp">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdk\model.hpp">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdk\sdk.hpp">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdk\trace.hpp">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sdk\usercmd.hpp">
+      <Filter>src\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\settings.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\config.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\font_data.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\input.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\menu.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\render.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\theme.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\widgets.hpp">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\backends\imgui_impl_dx11.h">
+      <Filter>external\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\backends\imgui_impl_win32.h">
+      <Filter>external\imgui\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imconfig.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imgui.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imgui_internal.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imstb_rectpack.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imstb_textedit.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\imgui\imstb_truetype.h">
+      <Filter>external\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\nlohmann\json.hpp">
+      <Filter>external\nlohmann</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\safetyhook\Zydis.h">
+      <Filter>external\safetyhook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\external\safetyhook\safetyhook.hpp">
+      <Filter>external\safetyhook</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="opaline/opaline.vcxproj" Id="504b01ac-0f11-4f10-828c-bd93462695ac" />
+</Solution>

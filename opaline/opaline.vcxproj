@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{504b01ac-0f11-4f10-828c-bd93462695ac}</ProjectGuid>
+    <RootNamespace>opaline</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)..\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\bin\obj\Debug\</IntDir>
+    <TargetName>opaline_debug</TargetName>
+    <IncludePath>$(ProjectDir)..\src;$(ProjectDir)..\external;$(ProjectDir)..\external\imgui;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)..\bin\</OutDir>
+    <IntDir>$(ProjectDir)..\bin\obj\Release\</IntDir>
+    <TargetName>opaline</TargetName>
+    <IncludePath>$(ProjectDir)..\src;$(ProjectDir)..\external;$(ProjectDir)..\external\imgui;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;_WINDOWS;_USRDLL;IMGUI_IMPL_WIN32_DISABLE_GAMEPAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;_WINDOWS;_USRDLL;IMGUI_IMPL_WIN32_DISABLE_GAMEPAD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\core\game.cpp">
+      <ObjectFileName>$(IntDir)core_game.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\core\hooks.cpp">
+      <ObjectFileName>$(IntDir)core_hooks.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\core\log.cpp">
+      <ObjectFileName>$(IntDir)core_log.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\core\modules.cpp">
+      <ObjectFileName>$(IntDir)core_modules.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\core\thread_pool.cpp">
+      <ObjectFileName>$(IntDir)core_thread_pool.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\antiaim\antiaim.cpp">
+      <ObjectFileName>$(IntDir)features_antiaim_antiaim.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\misc\camera.cpp">
+      <ObjectFileName>$(IntDir)features_misc_camera.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\movement\autostrafe.cpp">
+      <ObjectFileName>$(IntDir)features_movement_autostrafe.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\movement\bhop.cpp">
+      <ObjectFileName>$(IntDir)features_movement_bhop.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\movement\jumpbug.cpp">
+      <ObjectFileName>$(IntDir)features_movement_jumpbug.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\autostop.cpp">
+      <ObjectFileName>$(IntDir)features_rage_autostop.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\hitboxes.cpp">
+      <ObjectFileName>$(IntDir)features_rage_hitboxes.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\hitchance.cpp">
+      <ObjectFileName>$(IntDir)features_rage_hitchance.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\penetration.cpp">
+      <ObjectFileName>$(IntDir)features_rage_penetration.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\points.cpp">
+      <ObjectFileName>$(IntDir)features_rage_points.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\punch.cpp">
+      <ObjectFileName>$(IntDir)features_rage_punch.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\ragebot.cpp">
+      <ObjectFileName>$(IntDir)features_rage_ragebot.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\rage\records.cpp">
+      <ObjectFileName>$(IntDir)features_rage_records.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\visuals\esp.cpp">
+      <ObjectFileName>$(IntDir)features_visuals_esp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\features\visuals\scope.cpp">
+      <ObjectFileName>$(IntDir)features_visuals_scope.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\input\command.cpp">
+      <ObjectFileName>$(IntDir)input_command.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <ObjectFileName>$(IntDir)main.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\pch.cpp">
+      <ObjectFileName>$(IntDir)pch.obj</ObjectFileName>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\prediction\engine.cpp">
+      <ObjectFileName>$(IntDir)prediction_engine.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\sdk\engine.cpp">
+      <ObjectFileName>$(IntDir)sdk_engine.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\sdk\entities.cpp">
+      <ObjectFileName>$(IntDir)sdk_entities.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\config.cpp">
+      <ObjectFileName>$(IntDir)ui_config.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\input.cpp">
+      <ObjectFileName>$(IntDir)ui_input.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\menu.cpp">
+      <ObjectFileName>$(IntDir)ui_menu.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\render.cpp">
+      <ObjectFileName>$(IntDir)ui_render.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\theme.cpp">
+      <ObjectFileName>$(IntDir)ui_theme.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\widgets.cpp">
+      <ObjectFileName>$(IntDir)ui_widgets.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\backends\imgui_impl_dx11.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\backends\imgui_impl_win32.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_draw.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_tables.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <ClCompile Include="..\external\imgui\imgui_widgets.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <ClCompile Include="..\external\safetyhook\Zydis.c">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <CompileAs>CompileAsC</CompileAs>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\external\safetyhook;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\external\safetyhook\safetyhook.cpp">
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <ClCompile Include="slowwalk.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\core\game.hpp" />
+    <ClInclude Include="..\src\core\hooks.hpp" />
+    <ClInclude Include="..\src\core\log.hpp" />
+    <ClInclude Include="..\src\core\modules.hpp" />
+    <ClInclude Include="..\src\core\thread_pool.hpp" />
+    <ClInclude Include="..\src\features\antiaim\antiaim.hpp" />
+    <ClInclude Include="..\src\features\misc\camera.hpp" />
+    <ClInclude Include="..\src\features\movement\movement.hpp" />
+    <ClInclude Include="..\src\features\rage\autostop.hpp" />
+    <ClInclude Include="..\src\features\rage\hitboxes.hpp" />
+    <ClInclude Include="..\src\features\rage\hitchance.hpp" />
+    <ClInclude Include="..\src\features\rage\penetration.hpp" />
+    <ClInclude Include="..\src\features\rage\points.hpp" />
+    <ClInclude Include="..\src\features\rage\punch.hpp" />
+    <ClInclude Include="..\src\features\rage\ragebot.hpp" />
+    <ClInclude Include="..\src\features\rage\records.hpp" />
+    <ClInclude Include="..\src\features\visuals\esp.hpp" />
+    <ClInclude Include="..\src\features\visuals\scope.hpp" />
+    <ClInclude Include="..\src\input\command.hpp" />
+    <ClInclude Include="..\src\pch.hpp" />
+    <ClInclude Include="..\src\prediction\engine.hpp" />
+    <ClInclude Include="..\src\sdk\engine.hpp" />
+    <ClInclude Include="..\src\sdk\entities.hpp" />
+    <ClInclude Include="..\src\sdk\generated\client.hpp" />
+    <ClInclude Include="..\src\sdk\math.hpp" />
+    <ClInclude Include="..\src\sdk\model.hpp" />
+    <ClInclude Include="..\src\sdk\sdk.hpp" />
+    <ClInclude Include="..\src\sdk\trace.hpp" />
+    <ClInclude Include="..\src\sdk\usercmd.hpp" />
+    <ClInclude Include="..\src\settings.hpp" />
+    <ClInclude Include="..\src\ui\config.hpp" />
+    <ClInclude Include="..\src\ui\font_data.hpp" />
+    <ClInclude Include="..\src\ui\input.hpp" />
+    <ClInclude Include="..\src\ui\menu.hpp" />
+    <ClInclude Include="..\src\ui\render.hpp" />
+    <ClInclude Include="..\src\ui\theme.hpp" />
+    <ClInclude Include="..\src\ui\widgets.hpp" />
+    <ClInclude Include="..\external\imgui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="..\external\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="..\external\imgui\imconfig.h" />
+    <ClInclude Include="..\external\imgui\imgui.h" />
+    <ClInclude Include="..\external\imgui\imgui_internal.h" />
+    <ClInclude Include="..\external\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\external\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\external\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\external\nlohmann\json.hpp" />
+    <ClInclude Include="..\external\safetyhook\Zydis.h" />
+    <ClInclude Include="..\external\safetyhook\safetyhook.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
